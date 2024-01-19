@@ -1,5 +1,5 @@
 require "httparty"
-url="https://jsonplaceholder.typicode.com/posts?per_page=10&page=1"
+url="https://jsonplaceholder.typicode.com/posts"
 posts=HTTParty.get(url)
 if posts.code.to_i==200
     data=JSON.parse(posts.body)
