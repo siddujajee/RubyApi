@@ -6,7 +6,7 @@ if posts.code.to_i==200
 else
     puts "#{posts.code}-#{posts.message}"
 end
-data.first(10).each_with_index do |p, index|   
+data.each_with_index do |p, index|   
 File.open("post#{index + 1}.txt", "w+"){|f| f.write(p)}
 puts "file#{index+1} created successfully" 
 end
